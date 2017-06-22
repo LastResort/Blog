@@ -33,7 +33,7 @@
 接下來分別使用四個層級的路徑來引用：
 1. localhost/root.aspx
 ```html
-    <%--使用了相對路徑，導致會回上一層--%>
+    <%--使用了相對路徑，導致會回上一層，但因為是根目錄，所以不會有404--%>
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
     
     <%--從根目路開始找起--%>
@@ -49,6 +49,7 @@
 2. localhost/first/first.aspx
 ```html
     <%--使用了相對路徑，導致會回上一層--%>
+    <%-- 200: http://localhost:65042/Scripts/jquery-1.10.2.min.js --%>
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
     
     <%--從根目路開始找起--%>
@@ -63,7 +64,8 @@
 
 3. localhost/first/second/second.aspx
 ```html
-    <%--使用了相對路徑，導致會回上一層--%>
+    <%--使用了相對路徑，導致會回上一層--%>
+    <%-- 404: http://localhost:65042/first/Scripts/jquery-1.10.2.min.js --%>
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
     
     <%--從根目路開始找起--%>
@@ -79,7 +81,8 @@
 4. localhost/first/second/third/third.aspx
 ```html
     <%--使用了相對路徑，導致會回上一層--%>
-    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <%-- 404: http://localhost:65042/first/second/Scripts/jquery-1.10.2.min.js --%>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
     
     <%--從根目路開始找起--%>
     <script src="/Scripts/jquery-1.10.2.min.js"></script>
