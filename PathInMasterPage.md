@@ -100,3 +100,8 @@
 
 另外在javascript底下，當然就是用絕對路徑或是由根目錄查找的相對路徑方式來組URL。
 
+## References:
+[MSDN - Control.ResolveUrl 方法 (String)](https://msdn.microsoft.com/zh-tw/library/system.web.ui.control.resolveurl(v=vs.110).aspx)
+[MSDN - Control.ResolveClientUrl 方法 (String)](https://msdn.microsoft.com/zh-tw/library/system.web.ui.control.resolveclienturl%28v=vs.110%29.aspx?f=255&MSPPError=-2147217396)
+[ASP.NET 網站路徑](https://msdn.microsoft.com/zh-tw/library/ms178116(v=vs.110).aspx)
+
